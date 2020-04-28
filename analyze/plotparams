@@ -1,0 +1,3 @@
+uWSGI_Django
+ab -n 10000 -c 300 -g uWSGI_Django.tsv localhost:8000/api/testovi/1/
+300
