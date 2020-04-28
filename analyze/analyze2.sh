@@ -7,7 +7,7 @@ read -n 1 -s -r -p "Pritisni taster za pocetak..."
 rm -f *.tsv
 for i in {100..1000..100}
 do
-  COMMAND="ab -n $REQUESTS -c $i -g $i.tsv localhost/v2/api/testovi/1/"
+  COMMAND="ab -n $REQUESTS -c $i -g $i.tsv -H \"Authorization:Basic dWNlbmlrLjFAZ21haWwuY29tOjEyMzQ1\" localhost/v2/api/testovi/1/"
   eval $COMMAND
   sleep 5
 done
